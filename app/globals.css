@@ -2,20 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'modern';
+  src: url('../public/fonts/ElMessiri/Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'proza';
+  src: url('../public/fonts/Proza/ProzaLibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --modern: 'modern';
+  --proza: 'proza';
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--proza);
+}
+
+@layer base {
+  .border-test{
+    @apply border-[1px] border-red-500;
+  }
+  .smooth{
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@layer utilities{
+  .blue-gradient{
+    background: linear-gradient(90deg, rgba(85,96,182,1) 0%, rgba(11,28,97,1) 100%);
+  }
+  .orange-gradient{
+    background: rgb(228,162,74);
+    background: linear-gradient(90deg, rgba(255,181,102,1) 0%, rgba(240,124,0,0.9528186274509804) 100%);
+  }
+  .teal-gradient{
+    background: linear-gradient(90deg, rgba(0,178,178,1) 0%, rgba(34,96,130,1) 100%);
+  }
+  .img-container {
+    overflow: hidden;
+  }
+  .img-container img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
 }
