@@ -27,14 +27,16 @@ export default function Rooms() {
         <h2 className='text-[42px] text-bold text-center mb-10'>Choose Your <span>Perfect</span> Room</h2>
         <div className='flex gap-2 mx-10 border-box'>
             {rooms.map((room,i)=>(
-                <div className='rounded-2xl h-[400px] teal-gradient flex flex-col items-center justify-between text-white flex-1' key={i}>
+                <div className='rounded-2xl h-[400px] teal-gradient flex flex-col items-center text-white flex-1' key={i}>
                     <div className='img-container rounded-2xl h-[70%] smooth'><img src={`/rooms/${room.image}.webp`} alt={room.image} /></div>
-                    <p>{room.name}</p>
-                    <span className='flex gap-4'>
-                        <Bed size={20}/>
-                        <Persons size={20}/>
-                    </span>
-                    <p>{room.price}</p>
+                    <div className='flex flex-col items-center justify-center gap-2 h-[30%]'>
+                        <p>{room.name}</p>
+                        <span className='flex gap-4'>
+                            <Bed size={20}/>
+                            <Persons size={20}/>
+                        </span>
+                        <p>{room.price}</p>
+                    </div>
                 </div>
             ))}
             <div className='bg-[rgba(11,28,97,1)] rounded-2xl flex-1 relative'>

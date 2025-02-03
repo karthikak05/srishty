@@ -18,14 +18,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-[200px] border-test">
+      <section className="mt-[200px]">
         <AboutUs/>
       </section>
 
-      <section className="mt-[200px] border-test">
+      <section className="mt-[200px]">
         <Rooms/>
       </section>
-      {/* <CelebrationsPage/> */}
+      <CelebrationsPage/>
     </div>
   );
 }
