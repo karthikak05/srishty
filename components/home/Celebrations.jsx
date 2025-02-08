@@ -1,50 +1,51 @@
 import * as React from "react";
 import EventCard from "./EventCard";
-import ReserveCard from "./ReserveCard";
-import AmenityCard from "./AmenityCard";
-import { amenityRows } from "@/data/amenities";
 import { eventCards } from "@/data/eventCards";
+import { Sparkles } from "../Reusables/Particles";
+import Bottle from "../icons/Bottle";
 
 export default function CelebrationsPage() {
   return (
-    <div className="flex overflow-hidden flex-col items-center py-20 bg-neutral-200">
-      <div className="flex flex-col self-stretch px-6 py-16 w-full bg-black max-md:px-5 max-md:max-w-full">
-        <div className="self-center text-5xl font-medium text-center text-white max-md:text-4xl">
-          Elevate your
-        </div>
-        <div className="self-center text-center text-white text-[222px] max-md:max-w-full max-md:text-4xl">
-          Celebrations
+    <div className="flex flex-col self-stretch py-16 w-full bg-black max-md:max-w-full">
+      <div className="self-center text-5xl font-medium text-center text-white max-md:text-4xl">
+        Elevate your
+      </div>
+      <div className="font-stylish self-center text-center text-white text-[182px] max-md:max-w-full max-md:text-4xl">
+        Celebrations
+      </div>
+
+      {/* Grid Layout */}
+      <div className="grid grid-rows-2 gap-6 max-md:grid-rows-auto mx-4">
+        {/* Row 1 */}
+        <div className="grid grid-cols-[44%_55%] gap-4 max-md:grid-cols-1">
+          {eventCards.slice(0, 2).map((card, i) => (
+            <EventCard key={i} {...card} />
+          ))}
         </div>
 
-        <div className="z-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
-            {eventCards.slice(0,2).map((card, index) => (
-              <EventCard key={index} {...card} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
-            {eventCards.slice(2).map((card, index) => (
-              <EventCard key={index} {...card} />
-            ))}
-            <ReserveCard />
+        {/* Row 2 */}
+        <div className="grid grid-cols-[30%_40%_25%] gap-4 max-md:grid-cols-1">
+          {eventCards.slice(2, 5).map((card, i) => (
+            <EventCard key={i + 2} {...card} />
+          ))}
+          <div className="teal-gradient px-4 py-6 rounded-3xl text-white relative">
+            <h3 className="text-2xl font-semibold">Reserve Your Moment Now</h3>
+            <p className="mt-5">From corporate meetings to dream weddings, our venue is perfect for every occasion</p>
+            <div className="absolute bottom-0"><Bottle/></div>
+            <div className='relative h-[90%] overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#3273ff,transparent_90%)] before:opacity-40 '>
+              <Sparkles
+                  density={800}
+                  speed={1}
+                  size={1.1}
+                  direction='top'
+                  opacitySpeed={2}
+                  color='#FFFFFF'
+                  className='absolute inset-x-0 bottom-0 h-full w-full '
+              />
+            </div>
           </div>
         </div>
       </div>
-
-      {amenityRows.map((row, rowIndex) => (
-        <div key={rowIndex} className={`mt-${rowIndex === 0 ? '96' : '12'} w-full max-w-[1361px] max-md:mt-10 max-md:max-w-full`}>
-          <div className="flex gap-5 max-md:flex-col">
-            {row.map((amenity, index) => (
-              <div key={index} className={`flex flex-col ${index > 0 ? 'ml-5' : ''} w-${12/row.length}/12 max-md:ml-0 max-md:w-full`}>
-                <AmenityCard title={amenity.title} iconColor={amenity.icon} />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
     </div>
   );
 }

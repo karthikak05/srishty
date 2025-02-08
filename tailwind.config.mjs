@@ -11,13 +11,20 @@ export default {
       fontFamily: {
         modern: ['var(--modern)'],
         proza: ['var(--proza)'],
+        stylish: ['var(--stylish)'],
       },
       textColor:{
         primary: "#FF9100",
+        secondary : "#13384D"
       },
       backgroundColor:{
         primary: "#FF9100",
+        secondary : "#13384D"
       },
+      borderColor:{
+        primary: "#FF9100",
+        secondary : "#13384D"
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],

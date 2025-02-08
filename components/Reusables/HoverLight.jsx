@@ -67,7 +67,7 @@ export default function HoverLight({children}) {
             background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, #1740d1 0%,transparent 20%,transparent) fixed `,
           }}
         ></div>
-        <div className="relative text-center z-10 px-8 py-2 rounded-full w-fit bg-cover bg-white backdrop-blur-10 h-full mx-auto">
+        <div className="relative text-center z-10 px-8 py-2 rounded-full w-fit bg-cover bg-black backdrop-blur-10 h-full mx-auto">
           {children}
         </div>
       </div>

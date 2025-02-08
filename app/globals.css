@@ -14,9 +14,16 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'stylish';
+  src: url('../public/fonts/noxderity-font/Noxderity-1jj5g.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --modern: 'modern';
   --proza: 'proza';
+  --stylish : 'stylish';
 }
 
 body {
@@ -42,6 +49,19 @@ body {
   }
   .teal-gradient{
     background: linear-gradient(90deg, rgba(0,178,178,1) 0%, rgba(34,96,130,1) 100%);
+  }
+  .text-gradient {
+    background: linear-gradient(
+      90deg,
+      #fb4a1d 0%,
+      #f48164 22%,
+      #e7439d 48%,
+      #6684ff 69.5%,
+      #843bf8 87%,
+      #a03cf8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .img-container {
     overflow: hidden;

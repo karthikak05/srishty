@@ -4,7 +4,7 @@ function HeroImage() {
   return (
     <>
       <section
-        className="relative h-[100%] border-test"
+        className="relative h-[100%]"
         style={{
           aspectRatio: '1213/667',
           backgroundColor: 'tomato',
@@ -21,7 +21,7 @@ function HeroImage() {
         <img
           src="/hero-1.jpg"
           alt=""
-          className="w-full  h-full object-cover  aspect-square hover:scale-105 transition-all duration-300"
+          className="w-full h-full object-cover aspect-square hover:scale-105 transition-all duration-300"
         />
       </section>
     </>
