@@ -9,7 +9,7 @@ export default function AboutUs() {
         "Your magical escape for tranquility and timeless memories."
     ]
   return (
-    <div className='flex justify-around'>
+    <div className='flex justify-center gap-10'>
         <div className='h-[300px] w-[600px] flex blue-gradient rounded-2xl'>
             <div className='img-container h-[100%] w-[50%] rounded-2xl'><img src="/pool.jpg" alt="swimming-pool" className='object-cover ro'/></div>
             <div className='flex items-end justify-end w-[50%] pr-4 pb-4'><p className='text-white font-semibold'>Srishty's Serene Forest <br/>Retreat awaits</p></div>

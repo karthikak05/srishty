@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div>
       {[
-        <Hero />,
+        <Hero/>,
         <AboutUs />,
         <Rooms />,
         <CelebrationsPage />,
@@ -51,7 +51,7 @@ export default function Home() {
         <section
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="mb-[100px] opacity-0"
+          className="mb-[10%] opacity-0"
         >
           {Component}
         </section>

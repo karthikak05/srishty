@@ -14,7 +14,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="h-[600px] w-[100%] flex flex-col items-center justify-center mt-[50px]">
+    <div className="h-[600px] w-[100%] flex flex-col items-center justify-center mt-[5%]">
         <p className='text-2xl font-semibold pb-[100px]'>Stay in Harmony</p>
         <div className=' w-[80%] h-[90vh] rounded-xl relative grid place-items-center'>
         <div className='text-[112px] font-stylish teal-text p-0 absolute top-[-112px] z-10' ref={textRef}>with nature</div>
