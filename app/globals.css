@@ -63,6 +63,15 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .teal-text{
+    background: linear-gradient(
+      90deg,
+      #00B2B2 0%,
+      #163E54 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .img-container {
     overflow: hidden;
   }

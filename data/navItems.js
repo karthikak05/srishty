@@ -8,10 +8,6 @@ export const navItems = [
         "link":"/services"
     },
     {
-        "name" : "Locations",
-        "link":"/"
-    },
-    {
         "name" : "About Us",
         "link":"/"
     },

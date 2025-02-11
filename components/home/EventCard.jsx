@@ -8,7 +8,7 @@ export default function EventCard({ title, image }) {
           alt={title}
           className="object-cover w-[100%] h-full absolute inset-0"
         />
-        <p className="z-[99] font-modern absolute font-semibold opacity-75">{title}</p>
+        <p className="z-[99] font-proza absolute font-semibold opacity-75">{title}</p>
       </div>
     </div>
   );

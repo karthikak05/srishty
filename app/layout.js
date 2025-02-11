@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Reusables/Navbar";
+import LenisScroll from "@/hooks/SmoothScroll";
 
 export const metadata = {
   title: "Srishty Garden Resorts - Luxury & Comfort in Nature",
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar/>
-        {children}
+        <LenisScroll>{children}</LenisScroll>
       </body>
     </html>
   );

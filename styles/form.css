@@ -1,0 +1,18 @@
+input,textarea{
+    background: rgba(238, 238, 238, 0.541);
+    color:black;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+}
+input:active,textarea:focus{
+    outline: none;
+}
+input::placeholder,textarea::placeholder{
+    color: rgb(211, 211, 211);
+    font-weight: normal;
+}
+label{
+    font-weight: 600;
+}

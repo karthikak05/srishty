@@ -26,10 +26,10 @@ export default function Rooms() {
   return (
     <div className='mb-10'>
         <h2 className='text-[42px] text-bold text-center mb-10'>Choose Your <span className='font-stylish text-gradient'>Perfect</span> Room</h2>
-        <div className='flex gap-2 mx-10 border-box'>
+        <div className='flex gap-4 mx-10 border-box'>
             {rooms.map((room,i)=>(
                 <div className='rounded-2xl h-[400px] teal-gradient flex flex-col items-center text-white flex-1' key={i}>
-                    <div className='img-container rounded-t-2xl border-b-2 border-orange-400 h-[70%] smooth'><img src={`/rooms/${room.image}.webp`} alt={room.image} /></div>
+                    <div className='img-container rounded-t-2xl border-b-2 border-orange-400 h-[70%] w-[100%] smooth'><img src={`/rooms/${room.image}.webp`} alt={room.image} /></div>
                     <div className='flex flex-col items-center justify-center gap-2 h-[30%]'>
                         <p>{room.name}</p>
                         <span className='flex gap-4'>
