@@ -20,10 +20,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'redtrap';
+  src: url('../public/fonts/RedTrap/Redtrap-Expanded-PUO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --modern: 'modern';
   --proza: 'proza';
   --stylish : 'stylish';
+  --redtrap:'redtrap';
 }
 
 body {

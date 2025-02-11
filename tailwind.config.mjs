@@ -12,6 +12,7 @@ export default {
         modern: ['var(--modern)'],
         proza: ['var(--proza)'],
         stylish: ['var(--stylish)'],
+        redtrap: ['var(--redtrap)'],
       },
       textColor:{
         primary: "#FF9100",
